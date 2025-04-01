@@ -1,0 +1,205 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    z-index: 0;
+
+}
+
+nav {
+    z-index: 20;
+}
+
+.slideTop{
+    background: url(../../images/myPhoto.jpeg) no-repeat;
+    background-size: 100% 195%;
+    background-position: top center;
+    height: 100vh;
+}
+.header{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.header h1{
+    margin-bottom: 20px;
+}
+
+.db{
+    display: none;
+}
+
+.innerHeading {
+    font-size: 30px;
+
+
+    height: 38px;
+    overflow: hidden;
+
+    text-transform: uppercase;
+}
+
+.innerHeading span {
+    position: relative;
+    color: rgb(224, 210, 132);
+    animation: animation 16s ease infinite;
+}
+
+@keyframes animation {
+
+    0%,
+    100% {
+        top: 0px;
+
+    }
+
+    10% {
+        top: -45px;
+    }
+
+    20%{
+        top: -90px;
+    }
+    30%{
+        top: -135px;
+    }
+    40%{
+        top: -180px;
+    }
+    50%{
+        top: -180px;
+    }
+    60%{
+        top: -135px;
+    }
+    70%{
+        top: -90px;
+    }
+    80%{
+        top: -45px;
+    }
+    90%{
+        top: 0px;
+    }
+
+}
+
+.images1 {
+    width: 40%;
+    height: 600px;
+
+
+}
+
+.images1 img {
+    border: 1px solid white;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 0px 0px 20px white;
+
+}
+
+.intro-class {
+
+    width: 50%;
+    padding: 30px;
+}
+
+.class-portfolio {
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: rgb(32, 30, 30);
+    background-color: aliceblue;
+    padding: 20px 40px;
+    margin-top: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid tomato;
+
+}
+
+.class-portfolio:hover {
+    transform: scale(1.1, 1.1);
+
+
+}
+
+.fc1r2  a{
+    text-decoration: none;
+}
+
+.fc1r2 i {
+    font-size: 25px;
+    
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .fc1r2 {
+    margin-top: 60px;
+  
+  }
+  
+  .image2 {
+    width: 40%;
+
+}
+
+.image2 img {
+    width: 350px;
+    margin-left: 200px;
+    margin-top: 80px;
+    border-radius: 20px;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    box-shadow: 0px 0px 30px rgb(233, 171, 171);
+    border: 1px  solid white;
+}
+
+.dropdown-content {
+    display: none;
+    z-index: 1;
+    margin-left: 290px;
+    margin-top: -50px;
+}
+
+.down:hover {
+    background-color: #f1f1f1;
+}
+
+.down:hover .dropdown-content {
+    display: block;
+
+
+}
+
+.down {
+    z-index: 0;
+}
+
+
+
+.c1 .btn {
+    width: 300px;
+}
+
+.c2 {
+    width: 40%;
+    box-sizing: border-box;
+    padding: 50px 100px;
+
+}
