@@ -13,6 +13,7 @@ nav {
 }
 
 .slideTop{
+    filter:greyscale(100%);
     background: url(../../images/myPhoto.jpeg) no-repeat;
     background-size: 100% 195%;
     background-position: top center;
