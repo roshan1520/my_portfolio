@@ -4,372 +4,459 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Roshan Gupta</title>
-    <link rel="shortcut icon" href="./images/profilePhoto.jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <style>
-        img {
-            filter: grayscale(100%);
-        }
-    </style>
+    <title>Roshan Gupta | Portfolio</title>
+
+    <link rel="icon" href="images/profilePhoto.jpeg" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="slideTop position-sticky top-0">
-        <div class="header">
-            <h1>Roshan Gupta</h1>
-            <div style="display: flex; gap: 10px;">
-                <h2 style="font-size: 30px;">I am, </h2>
-                <div class="innerHeading">
-                    <span>Software Developer <br>
-                        Front-End Developer <br>
-                        Java Developer <br>
-                        Python Developer <br>
-                        Back-End Developer <br>
+<scr>
 
-                    </span>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h2 class="logo">Roshan Gupta</h2>
 
-                </div>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
 
+        <nav id="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#internship">Internship</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
 
-            </div>
-            <a href="#intro" class="class-portfolio" onclick="portFolio()">MY PORTFOLIO</a>
-            <div class="fc1r2">
-                <a href="https://www.facebook.com/share/18eXqzHyQS/" target="_blank"><i
-                        class="fa-brands fa-facebook"></i></a>
+            <h1 class="fade-in">Hi, I'm Roshan 👋</h1>
 
-                <a href="https://x.com/RoshanGupt53146?t=4k0ALaHq-RSksGokcg7aZA&s=09" target="_blank"><i
-                        class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/roshan-gupta-458825160?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="_blank"><i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/roshangupta.x01?igsh=MWk5bGliOTg3eXhsdQ==" target="_blank"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://youtube.com/@visionmathematics3523?si=98dSTEYvBvU8sUNg" target="_blank"><i
-                        class="fa-brands fa-youtube"></i>
-                </a>
-                <a href="https://arindianews1.blogspot.com/" target="_blank"><i class="fa-brands fa-blogger"></i></a>
+            <h2 class="typing"></h2>
+
+            <p class="fade-up">
+                I build modern web apps using Java, React & Python.
+            </p>
+
+            <div class="buttons fade-up delay">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn outline">Contact Me</a>
             </div>
 
         </div>
-    </div>
 
-    <div class="db">
-        <div class="position-sticky top-0 bg-dark">
-            <nav class="navbar navbar-expand-lg bg-dark position-sticky top-0  border-bottom border-light">
-                <div class="container-fluid bg-dark">
-                    <a class="navbar-brand text-info" href="./index.html">Roshan Gupta</a>
-                    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
-                        </ul>
-                        <div>
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-dark">
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="./index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="#aboutMe">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="#project">Project</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="#contact">Contact</a>
-                                </li>
-                            </ul>
-
-
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <div class=" d-flex flex-wrap" id="intro" style="">
-                <div class="images1 z-0">
-                    <img src="./images/profilePhoto.jpeg" alt="">
-                </div>
-                <div class="text-light intro-class z-1">
-                    <h1
-                        style="font-size: 60px; font-weight: bolder; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-                        MY <br> PORTFOLIO</h1>
-                    <div class="mt-4">
-                        <h1> My name is Roshan Gupta</h1>
-                        <div style="display: flex; gap: 10px; ">
-                            <h2 style="font-size: 30px;">I am, </h2>
-                            <div class="innerHeading">
-                                <span>Software Developer <br>
-                                    Front-End Developer <br>
-                                    Java Developer <br>
-                                    Python Developer <br>
-                                    Back-End Developer <br>
-
-                                </span>
-                            </div>
-                        </div>
-                        <div class="mt-5">
-                            <a href="#introduction" class="btn  btn-light me-4 ">Explore Now</a>
-                            <a href="#project" class="btn btn-info ">View Projects</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class=" bg-dark text-light mt-5 ms-5" id="introduction">
-                    <div class="w-75">
-
-
-                        <h1 class="ms-0"
-                            style="border-bottom: 1px solid white; width: 130px; font-size: 70px; padding-bottom: 0px;">
-                            Introduction</h1>
-                        <p class="ms-5 me-0">Hello, I'm Roshan Gupta <br><br>
-                            I am a passionate and driven college student with a strong interest in web development,
-                            machine
-                            learning, and software engineering. I enjoy building practical solutions, from full-stack
-                            web
-                            applications to machine learning models for real-world problems. <br><br>
-
-                            My skill set includes: <br>
-                        <ul class="ms-5">
-                            <li>Web Development: Django, PHP, HTML, CSS, JavaScript, and Bootstrap</li>
-
-                            <li>Programming Languages: Java, Python, C, C++, C#</li>
-
-                            <li>Machine Learning: NLP, BERT, TensorFlow, and Scikit-Learn </li>
-
-                            <li>Database Management: MySQL, JDBC, and Hibernate </li>
-
-                            <li>Version Control: Git and GitHub </li><br>
-                        </ul>
-                        </p>
-                        <p class="">
-                            I am constantly exploring new technologies and expanding my expertise. This portfolio
-                            showcases
-                            my projects, technical skills, and the creative solutions I've developed. Feel free to
-                            explore
-                            my
-                            work and reach out for collaboration or feedback.
-                        </p>
-                    </div>
-
-                    <!-- <div class="image2 ms-5">
-                        <img src="./images/WhatsApp Image 2025-03-23 at 00.42.58 (2).jpeg" alt="" class=" ">
-                    </div> -->
-                </div>
-            </div>
-
-            <div class="project bg-dark text-light mt-5 ms-5" id="project">
-
-                <h1 style="border-bottom: 1px solid white; font-size: 70px; padding-bottom: 0px;">
-                    Projects</h1>
-
-                <div class="project d-flex flex-wrap justify-content-around">
-                    <div class="project-video">
-                        <video controls>
-                            <source src="./video/Screen Recording 2024-11-10 at 9.31.17 PM.mov" type="video/mp4">
-
-                        </video>
-                        <p align="center">Snake Game</p>
-
-                    </div>
-                    <div class="project-video">
-                        <video controls>
-                            <source src="./video/Screen Recording 2024-11-11 at 3.58.52 PM.mov" type="video/mp4">
-
-                        </video>
-                        <p align="center">Text Editor</p>
-
-                    </div>
-                    <div class="project-video">
-                        <video controls>
-                            <source src="./video/Screen Recording 2025-03-23 at 1.54.45 PM.mov" type="video/mp4">
-
-                        </video>
-                        <p align="center">SalesForce: Homepage Clone</p>
-
-                    </div>
-                    <div class="project-video card w-100 mb-2">
-                        <span>Github Link</span><br>
-                        <a href="https://github.com/roshan1520/E-commerce-project.git" class="btn btn-info">Go To
-                            Project</a>
-                        <p align="center">E-Commerce Website Database Connected using php and MySQL </p>
-
-                    </div>
-                    <div class="project-video card w-100">
-                        <span>Github Link</span><br>
-                        <a href="https://github.com/roshan1520/CRUDWITHJAVA.git" class="btn btn-info">Go To
-                            Project</a>
-                        <p align="center">CRUD WITH JAVA USING FILE SYSTEM </p>
-
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            <div class="aboutMe bg-dark text-light mt-5 ms-5" id="aboutMe">
-                <h1 style="border-bottom: 1px solid white; font-size: 70px; padding-bottom: 0px;">
-                    About Me</h1>
-                <div class="d-flex flex-wrap">
-
-
-                    <div class="c1 z-1">
-
-                        <h1>Education</h1>
-                        <ul class="list-unstyled w-25 d-grid">
-
-
-                            <li class="down position-relative d-inline-block btn btn-info m-1"><span>SSC</span>
-
-
-                                <div
-                                    class="dropdown-content  position-absolute   bg-body-tertiary w-100 text-dark-emphasis   border border-1 shadow-lg  rounded">
-                                    <p class="">
-                                        Percentage:67% <br> Board:GSEB
-                                        <br>
-                                        School:Little
-                                        Flower
-                                        High
-                                        School
-                                    </p>
-                                </div>
-
-                            </li>
-                            <li class="down position-relative  btn btn-info m-1"><span>HSC</span>
-
-
-                                <div
-                                    class="dropdown-content  position-absolute  bg-body-tertiary w-100 text-dark-emphasis   border border-1 shadow-lg    rounded">
-                                    <p class="">Percentage:61% <br> Board:GSEB
-                                        <br>
-                                        School:Sanskar Vidya Sankul
-                                    </p>
-                                </div>
-
-                            </li>
-                            <li class="down position-relative d-inline-block btn btn-info m-1"><span>BE in Computer
-                                    Science
-                                    and Engineering</span>
-
-
-                                <div
-                                    class="dropdown-content  position-absolute  bg-body-tertiary w-100 text-dark-emphasis  border border-1 shadow-lg    rounded">
-                                    <p class="">CGPA:8.29 <br> University:GTU
-                                        <br>
-                                        College:SNPIT
-                                    </p>
-                                </div>
-
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="c2 text-center z-0">
-                        <img src="./images/profilePhoto.jpeg" alt="" style="">
-                        <div class="fc1r2 text-center d-flex">
-
-                            <a href="https://www.facebook.com/share/18eXqzHyQS/" target="_blank"><i
-                                    class="fa-brands fa-facebook"></i></a>
-
-                            <a href="https://x.com/RoshanGupt53146?t=4k0ALaHq-RSksGokcg7aZA&s=09" target="_blank"><i
-                                    class="fa-brands fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/in/roshan-gupta-458825160?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                                target="_blank"><i class="fa-brands fa-linkedin"></i>
-                            </a>
-                            <a href="https://www.instagram.com/roshangupta.x01?igsh=MWk5bGliOTg3eXhsdQ=="
-                                target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://youtube.com/@visionmathematics3523?si=98dSTEYvBvU8sUNg" target="_blank"><i
-                                    class="fa-brands fa-youtube"></i>
-                            </a>
-                            <a href="https://arindianews1.blogspot.com/" target="_blank"><i
-                                    class="fa-brands fa-blogger"></i></a>
-                        </div>
-                    </div>
-                    <div class="c3">
-                        <h1>Skills</h1>
-                        <ul>
-                            <li>
-                                Programming Languages: C, C++, C#, Java, Python, JavaScript, JDBC
-                            </li>
-
-                            <li>
-                                Web Development: HTML, CSS, Bootstrap, React, php, jsp
-                            </li>
-                            <li>
-                                Database Management: MySQL, MongoDB
-                            </li>
-                            <li>
-                                Operating System: Windows, Linux, Mac
-                            </li>
-                            <li>
-                                Framework: Django, Laravel, 
-                            </li>
-                            <li>
-                                Tools: VS Code, PyCharm, Eclipse, IntelliJ IDEA, Git, Apache NetBeans
-                            </li>
-                        </ul>
-
-                        <h1> Resume</h1>
-                        <a href="./document/Roshan_Gupta(1) (1).pdf" class="btn btn-success" target="_blank">Download
-                            Resume</a>
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact bg-dark text-light mt-5 ms-5" id="contact">
-                <h1 class="text-light" style="border-bottom: 1px solid white; font-size: 70px; padding-bottom: 0px;">
-                    Contact</h1>
-                E-mail: <a href="mailto:roshanvareli707@gmail.com"
-                    class="text-white text-decoration-none">roshanvareli707@gmail.com</a><br>
-                Phone: <a href="tel:+917201924749" class="text-white text-decoration-none">+91 7201924749
-
-                    <div class="fc1r2" style="margin-top: 10px;">
-
-
-                        <a href="https://www.facebook.com/share/18eXqzHyQS/" target="_blank"><i
-                                class="fa-brands fa-facebook"></i></a>
-
-                        <a href="https://x.com/RoshanGupt53146?t=4k0ALaHq-RSksGokcg7aZA&s=09" target="_blank"><i
-                                class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/roshan-gupta-458825160?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                            target="_blank"><i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.instagram.com/roshangupta.x01?igsh=MWk5bGliOTg3eXhsdQ==" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="https://youtube.com/@visionmathematics3523?si=98dSTEYvBvU8sUNg" target="_blank"><i
-                                class="fa-brands fa-youtube"></i>
-                        </a>
-                        <a href="https://arindianews1.blogspot.com/" target="_blank"><i
-                                class="fa-brands fa-blogger"></i></a>
-                    </div>
-                    <p class="text-light text-center bg-dark  mb-0 pb-3"> &copy; 2025 Roshan Gupta. All rights
-                        reserved.</p>
-
-            </div>
+        <div class="hero-img">
+            <img src="images/profilePhoto.jpeg" alt="profile">
         </div>
-    </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+
+        <h2 data-aos="fade-down">About Me</h2>
+
+        <div class="about-container">
+
+            <!-- LEFT TEXT -->
+            <div class="about-text" data-aos="fade-right">
+
+                <h1>
+                    Hi, I'm <span>Roshan Gupta</span>
+                </h1>
+
+                <h3>Building Scalable Solutions with Code</h3>
+
+                <p>
+                    I am a passionate <b>Full Stack Developer</b> with strong expertise in building modern, scalable,
+                    and user-friendly web applications using <b>Java, React, Python, Django, and MySQL</b>.
+
+                    <br><br>
+
+                    I have hands-on experience working on real-world projects including full-stack applications,
+                    backend systems, and machine learning models. I enjoy solving complex problems and continuously
+                    improving my skills.
+
+                    <br><br>
+
+                    I am always eager to explore new technologies and build impactful digital solutions.
+                </p>
+
+                <!-- Skills -->
+                <div class="skills">
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>React</span>
+                    <span>Django</span>
+                    <span>Spring Boot</span>
+                    <span>MySQL</span>
+                    <span>Machine Learning</span>
+                    <span>Git & GitHub</span>
+                    <span>AL (Dynamic 365 Business Central )</span>
+                </div>
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="about-img" data-aos="fade-left">
+                <img src="images/profilePhoto.jpeg" alt="Roshan Gupta">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+
+        <h2 data-aos="fade-down">My Projects</h2>
+
+        <p data-aos="fade-up" style="color:#666; margin-bottom:30px;">
+            Here are some of the projects I've worked on, showcasing my skills in full stack development, backend
+            systems, and machine learning.
+        </p>
+
+        <div class="cards">
+
+            <!-- Stickify (TOP PROJECT 🔥) -->
+            <div class="card featured-ecom" data-aos="fade-up" data-aos-delay="0">
+
+                <h3> Stickify E-Commerce Platform</h3>
+
+                <p>
+                    Developed a full-stack e-commerce platform using MERN stack with secure payment integration.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>Integrated payment gateway (Stripe/Razorpay)</li>
+                    <li>Implemented cart & order system</li>
+                    <li>Built REST APIs using Node.js & Express</li>
+                    <li>Responsive frontend using React</li>
+                </ul>
+
+                <span class="tech">MongoDB • Express • React • Node • Payment</span>
+
+            </div>
+
+            <!-- ML PROJECT -->
+            <div class="card highlight main-ml" data-aos="fade-up" data-aos-delay="100">
+
+                <h3>Hate Speech Detection</h3>
+
+                <p>
+                    Machine Learning NLP system using BERT for detecting and classifying hate speech.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>Text preprocessing using NLP techniques</li>
+                    <li>Implemented BERT model</li>
+                    <li>Integrated with Django web app</li>
+                </ul>
+
+                <span class="tech">Python • Django • NLP • BERT</span>
+
+                <br><br>
+
+                <a href="https://github.com/roshan1520/Hate_text_Detection_using_ML_Project_Deploy_DJango.git"
+                    class="btn">View Code</a>
+
+            </div>
+
+            <!-- JOB PORTAL -->
+            <div class="card main-project" data-aos="fade-up" data-aos-delay="200">
+
+                <h3> Job Portal System</h3>
+
+                <p>
+                    Full-stack job portal with authentication, recruiter and student modules.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>JWT Authentication system</li>
+                    <li>Job & Application management</li>
+                    <li>Backend using Spring Boot</li>
+                    <li>Frontend integration with APIs</li>
+                </ul>
+
+                <span class="tech">Java • Spring Boot • React • JWT</span>
+
+            </div>
+
+            <!-- E-COMMERCE PHP -->
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+
+                <h3>E-Commerce Website</h3>
+
+                <p>
+                    Database-driven e-commerce application with authentication and product system.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>User authentication system</li>
+                    <li>Product management</li>
+                    <li>Database integration using MySQL</li>
+                </ul>
+
+                <span class="tech">PHP • MySQL</span>
+
+                <br><br>
+
+                <a href="https://github.com/roshan1520/E-commerce-project.git" class="btn">View Code</a>
+
+            </div>
+
+            <!-- CRUD -->
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+
+                <h3> CRUD Application</h3>
+
+                <p>
+                    Java-based application for managing records using file system.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>Create, Read, Update, Delete operations</li>
+                    <li>File-based data storage</li>
+                    <li>Simple user interaction system</li>
+                </ul>
+
+                <span class="tech">Java • File System</span>
+
+                <br><br>
+
+                <a href="https://github.com/roshan1520/CRUDWITHJAVA.git" class="btn">View Code</a>
+
+            </div>
+
+            <!-- TEXT EDITOR -->
+            <div class="card" data-aos="fade-up" data-aos-delay="500">
+
+                <video controls>
+                    <source src="./video/Screen Recording 2024-11-11 at 3.58.52 PM.mov" type="video/mp4">
+                </video>
+
+                <h3>Text Editor</h3>
+
+                <p>
+                    Custom text editor with file handling capabilities.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>Create & edit files</li>
+                    <li>Save and open documents</li>
+                    <li>File system integration</li>
+                </ul>
+
+                <span class="tech">Java</span>
+
+            </div>
+
+            <!-- SNAKE GAME -->
+            <div class="card" data-aos="fade-up" data-aos-delay="600">
+
+                <video controls>
+                    <source src="./video/Screen Recording 2024-11-10 at 9.31.17 PM.mov" type="video/mp4">
+                </video>
+
+                <h3> Snake Game</h3>
+
+                <p>
+                    Classic snake game with real-time movement and score tracking.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>Game logic implementation</li>
+                    <li>Keyboard controls</li>
+                    <li>Score tracking system</li>
+                </ul>
+
+                <span class="tech">Java</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="internship" class="section">
+
+        <h2 data-aos="fade-down">Internship Experience</h2>
+
+        <div class="cards">
+
+            <!-- ZIDIO -->
+            <div class="card" data-aos="fade-up" data-aos-delay="0">
+                <h3>ZIDIO CONNECT</h3>
+                <h4 style="color:#007bff;">Full Stack Developer Intern</h4>
+
+                <p>
+                    Worked on a full-stack Job Portal system with authentication and multiple user modules.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>Developed backend using <b>Spring Boot</b></li>
+                    <li>Implemented secure <b>JWT Authentication</b></li>
+                    <li>Created modules for Job, Application & Notifications</li>
+                    <li>Integrated frontend with backend APIs</li>
+                </ul>
+
+                <p><b>Tech:</b> Java, Spring Boot, React, MySQL, JWT</p>
+            </div>
+
+            <!-- CSR BOX -->
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>CSRBOX</h3>
+                <h4 style="color:#007bff;">Data Analytics Intern (15 Days)</h4>
+
+                <p>
+                    Completed a short-term internship focused on data analysis and visualization.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>Worked on data cleaning and preprocessing</li>
+                    <li>Performed basic data analysis and interpretation</li>
+                    <li>Created reports and insights from datasets</li>
+                    <li>Learned fundamentals of real-world data handling</li>
+                </ul>
+
+                <p><b>Tech:</b> Excel, Python, Tableau Data Analysis</p>
+            </div>
+
+            <!-- INKEY -->
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <h3>Inkey IT Solutions Pvt. Ltd.</h3>
+                <h4 style="color:#007bff;">Business Central Intern</h4>
+
+                <p>
+                    Currently working on Microsoft Dynamics 365 Business Central and ERP system development.
+                </p>
+
+                <ul style="text-align:left;">
+                    <li>Working on <b>Warehouse & Manufacturing Modules</b></li>
+                    <li>Learning and implementing <b>AL Language</b></li>
+                    <li>Understanding <b>ERP workflows and business processes</b></li>
+                    <li>Contributing to real-time project development</li>
+                </ul>
+
+                <p><b>Tech:</b> AL Language, Business Central, ERP</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="education" class="section">
+
+        <h2 data-aos="fade-down">Education</h2>
+
+        <div class="cards">
+
+            <!-- BE -->
+            <div class="card" data-aos="fade-up" data-aos-delay="0">
+                <h3>Bachelor of Engineering (Computer Science)</h3>
+                <h4>Gujarat Technological University (GTU)</h4>
+
+                <p>
+                    Completed graduation with strong foundation in programming, data structures,
+                    web development, and software engineering.
+                </p>
+
+                <p><b>College:</b> SNPIT</p>
+                <p class="highlight">CGPA: 8.29</p>
+            </div>
+
+            <!-- HSC -->
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Higher Secondary (HSC)</h3>
+                <h4>GSEB Board</h4>
+
+                <p>
+                    Completed higher secondary education with focus on science stream.
+                </p>
+
+                <p><b>School:</b> Sanskar Vidya Sankul</p>
+                <p class="highlight">Percentage: 61%</p>
+            </div>
+
+            <!-- SSC -->
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <h3>Secondary School (SSC)</h3>
+                <h4>GSEB Board</h4>
+
+                <p>
+                    Completed secondary education with foundational academic knowledge.
+                </p>
+
+                <p><b>School:</b> Little Flower High School</p>
+                <p class="highlight">Percentage: 67%</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+
+        <h2 data-aos="fade-down">Contact Me</h2>
+
+        <p data-aos="fade-up" style="margin-top:10px;">
+            Feel free to connect with me for opportunities, collaborations, or any queries.
+        </p>
+
+        <!-- Contact Info -->
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="info-box">
+                <span>📧</span>
+                <a href="mailto:roshanvareli707@gmail.com">roshanvareli707@gmail.com</a>
+            </div>
+
+            <div class="info-box">
+                <span>📱</span>
+                <a href="tel:+917201924749">+91 7201924749</a>
+            </div>
+
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-icons" data-aos="zoom-in" data-aos-delay="400">
+
+            <a href="https://www.linkedin.com/in/roshan-gupta-458825160" target="_blank">🔗 LinkedIn</a>
+
+            <a href="https://github.com/roshan1520" target="_blank">💻 GitHub</a>
+
+            <a href="https://x.com/RoshanGupt53146" target="_blank">🐦 Twitter</a>
+
+            <a href="https://www.instagram.com/roshangupta.x01" target="_blank">📸 Instagram</a>
+
+            <a href="https://youtube.com/@visionmathematics3523" target="_blank">▶️ YouTube</a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2025 Roshan Gupta. All rights reserved.</p>
+    </footer>
 
 
-    <script src="./assets/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
-        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="./script.js"></script>>
+
+    </body>
 
 </html>
