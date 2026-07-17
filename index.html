@@ -1,480 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roshan Gupta — Software Engineer</title>
-<link rel="icon" href="images/profilePhoto1.png" type="image/png">
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roshan Gupta — Software Engineer</title>
+  <link rel="icon" href="images/profilePhoto1.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Tab bar navigation -->
-  <header class="tabbar">
-    <div class="tabbar-brand">
-      <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
-      <span class="brand-name">roshan@portfolio</span>
-    </div>
+  <div class="ide-shell">
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
-
-    <nav id="nav-menu">
-      <a href="#home" class="tab active">home.tsx</a>
-      <a href="#about" class="tab">about.md</a>
-      <a href="#skills" class="tab">skills.json</a>
-      <a href="#projects" class="tab">projects/</a>
-      <a href="#experience" class="tab">experience.log</a>
-      <a href="#education" class="tab">education.md</a>
-      <a href="#contact" class="tab">contact.sh</a>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="terminal">
-      <div class="terminal-titlebar">
+    <!-- Sidebar file explorer -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
         <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
-        <span class="terminal-title">bash — roshan@inkey — 80×24</span>
+        <span class="sidebar-title">PORTFOLIO</span>
       </div>
-      <div class="terminal-body">
-        <p class="line"><span class="prompt">roshan@inkey</span><span class="path"> ~ </span><span class="sym">$</span> whoami</p>
-        <p class="out">Roshan Gupta — Full Stack &amp; ERP Software Engineer</p>
 
-        <p class="line"><span class="prompt">roshan@inkey</span><span class="path"> ~ </span><span class="sym">$</span> cat status.txt</p>
-        <p class="out out-status">
-          <span class="status-dot"></span> ONLINE — Associate Software Engineer @ Inkey IT Solutions Pvt. Ltd.
+      <nav class="filetree">
+        <p class="filetree-group">src</p>
+        <a href="#home" class="file-item active" data-section="home">
+          <span class="file-icon icon-tsx">TS</span> home.tsx
+        </a>
+        <a href="#about" class="file-item" data-section="about">
+          <span class="file-icon icon-md">MD</span> about.md
+        </a>
+        <a href="#skills" class="file-item" data-section="skills">
+          <span class="file-icon icon-json">{ }</span> skills.json
+        </a>
+        <a href="#projects" class="file-item" data-section="projects">
+          <span class="file-icon icon-dir">▸</span> projects/
+        </a>
+        <a href="#experience" class="file-item" data-section="experience">
+          <span class="file-icon icon-log">≡</span> experience.log
+        </a>
+        <a href="#learning" class="file-item" data-section="learning">
+          <span class="file-icon icon-branch">⑂</span> learning.branch
+        </a>
+        <a href="#education" class="file-item" data-section="education">
+          <span class="file-icon icon-md">MD</span> education.md
+        </a>
+        <a href="#contact" class="file-item" data-section="contact">
+          <span class="file-icon icon-sh">$</span> contact.sh
+        </a>
+      </nav>
+
+      <div class="sidebar-profile">
+        <img src="images/profilePhoto1.png" alt="Roshan Gupta">
+        <div>
+          <p class="sidebar-name">Roshan Gupta</p>
+          <p class="sidebar-role"><span class="status-dot"></span> Associate SWE</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+    <!-- Main column -->
+    <div class="main-col">
+
+      <!-- Breadcrumb / top bar -->
+      <header class="breadcrumb-bar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle file explorer">☰</button>
+        <p class="breadcrumb">
+          <span>portfolio</span><span class="crumb-sep">/</span><span id="crumb-current">home.tsx</span>
         </p>
+        <a href="#contact" class="breadcrumb-cta">./contact.sh</a>
+      </header>
 
-        <p class="line"><span class="prompt">roshan@inkey</span><span class="path"> ~ </span><span class="sym">$</span> ls stack/</p>
-        <p class="out out-stack">Java · Spring&nbsp;Boot · React · Python · Django · AL&nbsp;(Business&nbsp;Central) · MySQL · MongoDB</p>
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="terminal">
+          <div class="terminal-titlebar">
+            <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+            <span class="terminal-title">bash — roshan@inkey — 80×24</span>
+          </div>
+          <div class="terminal-body">
+            <p class="line"><span class="prompt">roshan@inkey</span><span class="path"> ~ </span><span
+                class="sym">$</span> whoami</p>
+            <p class="out">Roshan Gupta — Full Stack &amp; ERP Software Engineer</p>
 
-        <p class="line"><span class="prompt">roshan@inkey</span><span class="path"> ~ </span><span class="sym">$</span> <span class="typing"></span></p>
-      </div>
-    </div>
+            <p class="line"><span class="prompt">roshan@inkey</span><span class="path"> ~ </span><span
+                class="sym">$</span> cat status.txt</p>
+            <p class="out out-status">
+              <span class="status-dot"></span> ONLINE — Associate Software Engineer @ Inkey IT Solutions Pvt. Ltd.
+            </p>
 
-    <div class="hero-side">
-      <p class="eyebrow">// currently building</p>
-      <h1>I ship full‑stack products<br>and wire up ERP systems<br>that businesses run on.</h1>
-      <p class="hero-sub">
-        Recently promoted from intern to <strong>Associate Software Engineer</strong> at Inkey IT Solutions,
-        where I build on Microsoft Dynamics 365 Business Central. Outside of work: MERN commerce apps,
-        NLP models, and the occasional snake game.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">./view_projects.sh</a>
-        <a href="#contact" class="btn btn-ghost">./contact.sh</a>
-      </div>
-      <div class="hero-img">
-        <img src="images/profilePhoto.png" alt="Roshan Gupta">
-      </div>
-    </div>
-  </section>
+            <p class="line"><span class="prompt">roshan@inkey</span><span class="path"> ~ </span><span
+                class="sym">$</span> git branch</p>
+            <p class="out out-branches">
+              <span class="branch-main">* main</span> — Java, Spring Boot, React, Business Central, SharePoint, Power
+              Apps<br>
+              <span class="branch-wip"> learning</span> — Power BI, Power Platform, Azure, Data Analytics
+            </p>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <p class="section-label">01 — about.md</p>
-    <div class="md-card">
-      <div class="md-card-head"><span class="md-hash">#</span> About Me</div>
-      <div class="md-card-body">
-        <p>
-          I'm a full-stack developer working across <b>Java, Spring Boot, React, Python and Django</b>,
-          with production experience on <b>Microsoft Dynamics 365 Business Central</b> — building warehouse
-          and manufacturing modules in AL for real ERP deployments.
-        </p>
-        <p>
-          I like the parts of software that most people skip: authentication that actually holds up,
-          APIs that don't leak state, and data pipelines that don't quietly break. I've built that muscle
-          across e-commerce platforms, a job portal with JWT auth, and an NLP model for hate-speech
-          classification.
-        </p>
-        <div class="md-quote">
-          <span class="md-quote-mark">&gt;</span> Currently deep in ERP workflow logic — manufacturing orders,
-          warehouse bins, and the AL language that ties Business Central together.
+            <p class="line"><span class="prompt">roshan@inkey</span><span class="path"> ~ </span><span
+                class="sym">$</span> <span class="typing"></span></p>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <p class="section-label">02 — skills.json</p>
-    <div class="json-grid">
-
-      <div class="json-block" data-aos>
-        <p class="json-key">"languages"</p>
-        <div class="pill-row">
-          <span class="pill">Java</span><span class="pill">Python</span><span class="pill">C</span>
-          <span class="pill">C++</span><span class="pill">C#</span><span class="pill">AL</span>
-        </div>
-      </div>
-
-      <div class="json-block" data-aos>
-        <p class="json-key">"frontend"</p>
-        <div class="pill-row">
-          <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span>
-          <span class="pill">React</span><span class="pill">Bootstrap</span>
-        </div>
-      </div>
-
-      <div class="json-block" data-aos>
-        <p class="json-key">"backend"</p>
-        <div class="pill-row">
-          <span class="pill">Spring Boot</span><span class="pill">Django</span><span class="pill">Node.js</span>
-          <span class="pill">PHP</span>
-        </div>
-      </div>
-
-      <div class="json-block" data-aos>
-        <p class="json-key">"data"</p>
-        <div class="pill-row">
-          <span class="pill">MySQL</span><span class="pill">MongoDB</span>
-        </div>
-      </div>
-
-      <div class="json-block" data-aos>
-        <p class="json-key">"ml_nlp"</p>
-        <div class="pill-row">
-          <span class="pill pill-accent">Machine Learning</span><span class="pill pill-accent">NLP</span>
-          <span class="pill pill-accent">BERT</span><span class="pill pill-accent">Scikit-Learn</span>
-          <span class="pill pill-accent">TensorFlow</span>
-        </div>
-      </div>
-
-      <div class="json-block" data-aos>
-        <p class="json-key">"erp_business_central"</p>
-        <div class="pill-row">
-          <span class="pill pill-amber">AL Language</span><span class="pill pill-amber">Warehouse Module</span>
-          <span class="pill pill-amber">Manufacturing Module</span>
-        </div>
-      </div>
-
-      <div class="json-block" data-aos>
-        <p class="json-key">"tools"</p>
-        <div class="pill-row">
-          <span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">VS Code</span>
-          <span class="pill">IntelliJ</span><span class="pill">Postman</span>
-        </div>
-      </div>
-
-      <div class="json-block" data-aos>
-        <p class="json-key">"hardware"</p>
-        <div class="pill-row">
-          <span class="pill">Computer Repair</span><span class="pill">Networking Basics</span>
-          <span class="pill">System Installation</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <p class="section-label">03 — projects/</p>
-    <p class="section-sub">A few repos worth cloning.</p>
-
-    <div class="repo-grid">
-
-      <div class="repo-card repo-featured" data-aos>
-        <div class="repo-top">
-          <span class="repo-lang-dot dot-mongo"></span>
-          <h3>stickify-ecommerce</h3>
-          <span class="repo-tag">FEATURED</span>
-        </div>
-        <p class="repo-desc">Full-stack e-commerce platform on the MERN stack with live payment integration, cart and order flow.</p>
-        <ul class="repo-list">
-          <li>Stripe / Razorpay payment gateway</li>
-          <li>Cart &amp; order management system</li>
-          <li>REST APIs with Node.js &amp; Express</li>
-          <li>Responsive React frontend</li>
-        </ul>
-        <div class="repo-meta">
-          <span class="repo-stack">MongoDB · Express · React · Node</span>
-        </div>
-      </div>
-
-      <div class="repo-card repo-ml" data-aos>
-        <div class="repo-top">
-          <span class="repo-lang-dot dot-python"></span>
-          <h3>hate-speech-detection</h3>
-          <span class="repo-tag repo-tag-ml">ML</span>
-        </div>
-        <p class="repo-desc">NLP system using BERT to detect and classify hate speech, served through a Django web app.</p>
-        <ul class="repo-list">
-          <li>Text preprocessing pipeline</li>
-          <li>Fine-tuned BERT model</li>
-          <li>Deployed via Django</li>
-        </ul>
-        <div class="repo-meta">
-          <span class="repo-stack">Python · Django · NLP · BERT</span>
-          <a href="https://github.com/roshan1520/Hate_text_Detection_using_ML_Project_Deploy_DJango.git" class="repo-link" target="_blank" rel="noopener">View code →</a>
-        </div>
-      </div>
-
-      <div class="repo-card repo-main" data-aos>
-        <div class="repo-top">
-          <span class="repo-lang-dot dot-java"></span>
-          <h3>job-portal-system</h3>
-          <span class="repo-tag repo-tag-main">MAIN</span>
-        </div>
-        <p class="repo-desc">Full-stack job portal with recruiter and student modules, secured with JWT authentication.</p>
-        <ul class="repo-list">
-          <li>JWT authentication system</li>
-          <li>Job &amp; application management</li>
-          <li>Spring Boot backend, React frontend</li>
-        </ul>
-        <div class="repo-meta">
-          <span class="repo-stack">Java · Spring Boot · React · JWT</span>
-        </div>
-      </div>
-
-      <div class="repo-card" data-aos>
-        <div class="repo-top">
-          <span class="repo-lang-dot dot-php"></span>
-          <h3>ecommerce-php-mysql</h3>
-        </div>
-        <p class="repo-desc">Database-driven e-commerce app with authentication and product management.</p>
-        <ul class="repo-list">
-          <li>User authentication</li>
-          <li>Product management</li>
-          <li>MySQL integration</li>
-        </ul>
-        <div class="repo-meta">
-          <span class="repo-stack">PHP · MySQL</span>
-          <a href="https://github.com/roshan1520/E-commerce-project.git" class="repo-link" target="_blank" rel="noopener">View code →</a>
-        </div>
-      </div>
-
-      <div class="repo-card" data-aos>
-        <div class="repo-top">
-          <span class="repo-lang-dot dot-java"></span>
-          <h3>crud-file-system</h3>
-        </div>
-        <p class="repo-desc">Java application for managing records with file-based storage.</p>
-        <ul class="repo-list">
-          <li>Create, Read, Update, Delete</li>
-          <li>File-based persistence</li>
-        </ul>
-        <div class="repo-meta">
-          <span class="repo-stack">Java · File System</span>
-          <a href="https://github.com/roshan1520/CRUDWITHJAVA.git" class="repo-link" target="_blank" rel="noopener">View code →</a>
-        </div>
-      </div>
-
-      <div class="repo-card" data-aos>
-        <div class="repo-top">
-          <span class="repo-lang-dot dot-js"></span>
-          <h3>text-editor</h3>
-        </div>
-        <video controls>
-          <source src="./video/Screen Recording 2024-11-11 at 3.58.52 PM.mov" type="video/mp4">
-        </video>
-        <p class="repo-desc">Custom text editor with file creation, editing and save/open support.</p>
-        <div class="repo-meta">
-          <span class="repo-stack">JavaScript</span>
-        </div>
-      </div>
-
-      <div class="repo-card" data-aos>
-        <div class="repo-top">
-          <span class="repo-lang-dot dot-js"></span>
-          <h3>snake-game</h3>
-        </div>
-        <video controls>
-          <source src="./video/Screen Recording 2024-11-10 at 9.31.17 PM.mov" type="video/mp4">
-        </video>
-        <p class="repo-desc">Classic snake game with real-time movement and score tracking.</p>
-        <div class="repo-meta">
-          <span class="repo-stack">JavaScript</span>
-        </div>
-      </div>
-
-      <div class="repo-card" data-aos>
-        <div class="repo-top">
-          <span class="repo-lang-dot dot-android"></span>
-          <h3>ncert-books-app</h3>
-        </div>
-        <p class="repo-desc">Android app for browsing and downloading NCERT textbooks from the cloud.</p>
-        <ul class="repo-list">
-          <li>Cloud PDF downloads</li>
-          <li>JSON dataset</li>
-          <li>Full backend + frontend</li>
-        </ul>
-        <div class="repo-meta">
-          <span class="repo-stack">Android Studio</span>
-          <a href="./app-debug.apk" class="repo-link" download>Download APK →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Experience: commit log -->
-  <section id="experience" class="section">
-    <p class="section-label">04 — experience.log</p>
-    <p class="section-sub">git log --oneline --decorate</p>
-
-    <div class="commit-log">
-
-      <div class="commit commit-head" data-aos>
-        <div class="commit-rail">
-          <span class="commit-dot commit-dot-current"></span>
-          <span class="commit-line"></span>
-        </div>
-        <div class="commit-body">
-          <p class="commit-meta">
-            <span class="commit-hash">a1e4f9c</span>
-            <span class="commit-ref">HEAD -&gt; main</span>
+        <div class="hero-side">
+          <p class="eyebrow">// currently building</p>
+          <h1>I ship full‑stack products<br>and wire up the systems<br>businesses run on.</h1>
+          <p class="hero-sub">
+            <strong>Associate Software Engineer</strong> at Inkey IT Solutions — building on Microsoft Dynamics 365
+            Business Central and SharePoint, now including Power Apps canvas apps. On the side, I'm branching into
+            Power BI, the wider Power Platform, and Azure.
           </p>
-          <h3>Associate Software Engineer <span class="commit-org">@ Inkey IT Solutions Pvt. Ltd.</span></h3>
-          <p class="commit-date">Jul 2026 — Present</p>
-          <p class="commit-desc">Promoted from intern to full-time. Building on Microsoft Dynamics 365 Business Central.</p>
-          <ul class="commit-diff">
-            <li class="add">+ Owning features across Warehouse &amp; Manufacturing modules</li>
-            <li class="add">+ Writing production AL code for ERP workflows</li>
-            <li class="add">+ Collaborating directly with business stakeholders</li>
-          </ul>
-          <p class="commit-tech"><b>Tech:</b> AL Language · Business Central · ERP</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">./view_projects.sh</a>
+            <a href="#learning" class="btn btn-ghost">./learning.branch</a>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="commit" data-aos>
-        <div class="commit-rail">
-          <span class="commit-dot"></span>
-          <span class="commit-line"></span>
-        </div>
-        <div class="commit-body">
-          <p class="commit-meta"><span class="commit-hash">7c2b810</span></p>
-          <h3>Business Central Intern <span class="commit-org">@ Inkey IT Solutions Pvt. Ltd.</span></h3>
-          <p class="commit-date">2025 — 2026</p>
-          <p class="commit-desc">First hands-on work with Dynamics 365 Business Central and ERP development.</p>
-          <ul class="commit-diff">
-            <li class="add">+ Learned and implemented the AL language</li>
-            <li class="add">+ Contributed to Warehouse &amp; Manufacturing modules</li>
-            <li class="add">+ Understood ERP workflows and business processes</li>
-          </ul>
-          <p class="commit-tech"><b>Tech:</b> AL Language · Business Central · ERP</p>
-        </div>
-      </div>
+      <!-- About -->
+      <section id="about" class="section">
+        <p class="section-label">01 — about.md</p>
+        <div class="about-grid">
+          <div class="md-card">
+            <div class="md-card-head"><span class="md-hash">#</span> About Me</div>
+            <div class="md-card-body">
+              <p>
+                I'm a full-stack developer working across <b>Java, Spring Boot, React, Python and Django</b>,
+                with production experience on <b>Microsoft Dynamics 365 Business Central and SharePoint</b> —
+                building warehouse and manufacturing modules in AL, supporting intranet/document workflows, and
+                now building <b>Power Apps canvas apps</b> on top of SharePoint lists and data.
+              </p>
+              <p>
+                I like the parts of software most people skip: authentication that actually holds up, APIs that
+                don't leak state, and data pipelines that don't quietly break. That instinct is pulling me toward
+                the data side now — I'm learning <b>Power BI</b>, the wider <b>Microsoft Power Platform</b>
+                (Power Automate, Power Apps admin) and <b>Azure</b>, to close the loop between the systems I build
+                and the decisions they're meant to support.
+              </p>
+              <div class="md-quote">
+                <span class="md-quote-mark">&gt;</span> Currently deep in ERP + SharePoint + Power Apps workflow
+                logic at work, and Power Platform / Azure / BI tooling on my own branch.
+              </div>
+            </div>
+          </div>
 
-      <div class="commit" data-aos>
-        <div class="commit-rail">
-          <span class="commit-dot"></span>
-          <span class="commit-line"></span>
+          <div class="code-card">
+            <div class="code-titlebar">profile.ts</div>
+            <pre class="code-body"><span class="tok-kw">interface</span> <span class="tok-type">Engineer</span> {
+  name: <span class="tok-str">"Roshan Gupta"</span>;
+  role: <span class="tok-str">"Associate Software Engineer"</span>;
+  company: <span class="tok-str">"Inkey IT Solutions"</span>;
+  stack: [<span class="tok-str">"Java"</span>, <span class="tok-str">"Spring Boot"</span>, <span class="tok-str">"React"</span>,
+          <span class="tok-str">"Business Central"</span>, <span class="tok-str">"SharePoint"</span>,
+          <span class="tok-str">"Power Apps"</span>];
+  learning: [<span class="tok-str">"Power BI"</span>, <span class="tok-str">"Power Platform"</span>,
+             <span class="tok-str">"Azure"</span>, <span class="tok-str">"Data Analytics"</span>];
+  status: <span class="tok-str">"online"</span>;
+}</pre>
+          </div>
         </div>
-        <div class="commit-body">
-          <p class="commit-meta"><span class="commit-hash">4f91ab2</span></p>
-          <h3>Full Stack Developer Intern <span class="commit-org">@ ZIDIO Connect</span></h3>
-          <p class="commit-desc">Built a full-stack job portal with authentication and multiple user modules.</p>
-          <ul class="commit-diff">
-            <li class="add">+ Backend built with Spring Boot</li>
-            <li class="add">+ Secure JWT authentication</li>
-            <li class="add">+ Job, application &amp; notification modules</li>
-            <li class="add">+ Frontend wired to backend APIs</li>
-          </ul>
-          <p class="commit-tech"><b>Tech:</b> Java · Spring Boot · React · MySQL · JWT</p>
-        </div>
-      </div>
+      </section>
 
-      <div class="commit" data-aos>
-        <div class="commit-rail">
-          <span class="commit-dot"></span>
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <p class="section-label">02 — skills.json</p>
+        <p class="section-sub">Solid dots = shipped in production. Dashed = actively learning.</p>
+        <div class="json-grid">
+
+          <div class="json-block" data-aos>
+            <p class="json-key">"languages"</p>
+            <div class="pill-row">
+              <span class="pill">Java</span><span class="pill">Python</span><span class="pill">C</span>
+              <span class="pill">C++</span><span class="pill">C#</span><span class="pill">AL</span>
+            </div>
+          </div>
+
+          <div class="json-block" data-aos>
+            <p class="json-key">"frontend"</p>
+            <div class="pill-row">
+              <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span>
+              <span class="pill">React</span><span class="pill">Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="json-block" data-aos>
+            <p class="json-key">"backend"</p>
+            <div class="pill-row">
+              <span class="pill">Spring Boot</span><span class="pill">Django</span><span class="pill">Node.js</span>
+              <span class="pill">PHP</span>
+            </div>
+          </div>
+
+          <div class="json-block" data-aos>
+            <p class="json-key">"data"</p>
+            <div class="pill-row">
+              <span class="pill">MySQL</span><span class="pill">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="json-block" data-aos>
+            <p class="json-key">"ml_nlp"</p>
+            <div class="pill-row">
+              <span class="pill pill-accent">Machine Learning</span><span class="pill pill-accent">NLP</span>
+              <span class="pill pill-accent">BERT</span><span class="pill pill-accent">Scikit-Learn</span>
+              <span class="pill pill-accent">TensorFlow</span>
+            </div>
+          </div>
+
+          <div class="json-block" data-aos>
+            <p class="json-key">"microsoft_stack"</p>
+            <div class="pill-row">
+              <span class="pill pill-amber">AL Language</span><span class="pill pill-amber">Business Central</span>
+              <span class="pill pill-amber">SharePoint</span><span class="pill pill-amber">Power Apps</span>
+            </div>
+          </div>
+
+          <div class="json-block json-block-learning" data-aos>
+            <p class="json-key">"power_platform_and_cloud <span class="json-key-tag">// learning</span>"</p>
+            <div class="pill-row">
+              <span class="pill pill-learning">Power BI</span><span class="pill pill-learning">Power Automate</span>
+              <span class="pill pill-learning">Power Platform</span><span class="pill pill-learning">Azure</span>
+              <span class="pill pill-learning">Data Analytics</span>
+            </div>
+          </div>
+
+          <div class="json-block" data-aos>
+            <p class="json-key">"tools"</p>
+            <div class="pill-row">
+              <span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">VS Code</span>
+              <span class="pill">IntelliJ</span><span class="pill">Postman</span>
+            </div>
+          </div>
+
         </div>
-        <div class="commit-body">
-          <p class="commit-meta"><span class="commit-hash">0d13e77</span></p>
-          <h3>Data Analytics Intern <span class="commit-org">@ CSRBOX</span></h3>
-          <p class="commit-date">15-day internship</p>
-          <p class="commit-desc">Short-term internship focused on data analysis and visualization.</p>
-          <ul class="commit-diff">
-            <li class="add">+ Data cleaning &amp; preprocessing</li>
-            <li class="add">+ Reports and insights from real datasets</li>
-          </ul>
-          <p class="commit-tech"><b>Tech:</b> Excel · Python · Tableau</p>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <p class="section-label">03 — projects/</p>
+        <p class="section-sub">A few repos worth cloning.</p>
+
+        <div class="repo-grid">
+
+          <div class="repo-card repo-featured" data-aos>
+            <div class="repo-top">
+              <span class="repo-lang-dot dot-mongo"></span>
+              <h3>stickify-ecommerce</h3>
+              <span class="repo-tag">FEATURED</span>
+            </div>
+            <p class="repo-desc">Full-stack e-commerce platform on the MERN stack with live payment integration, cart
+              and order flow.</p>
+            <ul class="repo-list">
+              <li>Stripe / Razorpay payment gateway</li>
+              <li>Cart &amp; order management system</li>
+              <li>REST APIs with Node.js &amp; Express</li>
+              <li>Responsive React frontend</li>
+            </ul>
+            <div class="repo-meta">
+              <span class="repo-stack">MongoDB · Express · React · Node</span>
+            </div>
+          </div>
+
+          <div class="repo-card repo-ml" data-aos>
+            <div class="repo-top">
+              <span class="repo-lang-dot dot-python"></span>
+              <h3>hate-speech-detection</h3>
+              <span class="repo-tag repo-tag-ml">ML</span>
+            </div>
+            <p class="repo-desc">NLP system using BERT to detect and classify hate speech, served through a Django web
+              app.</p>
+            <ul class="repo-list">
+              <li>Text preprocessing pipeline</li>
+              <li>Fine-tuned BERT model</li>
+              <li>Deployed via Django</li>
+            </ul>
+            <div class="repo-meta">
+              <span class="repo-stack">Python · Django · NLP · BERT</span>
+              <a href="https://github.com/roshan1520/Hate_text_Detection_using_ML_Project_Deploy_DJango.git"
+                class="repo-link" target="_blank" rel="noopener">View code →</a>
+            </div>
+          </div>
+
+          <div class="repo-card repo-main" data-aos>
+            <div class="repo-top">
+              <span class="repo-lang-dot dot-java"></span>
+              <h3>job-portal-system</h3>
+              <span class="repo-tag repo-tag-main">MAIN</span>
+            </div>
+            <p class="repo-desc">Full-stack job portal with recruiter and student modules, secured with JWT
+              authentication.</p>
+            <ul class="repo-list">
+              <li>JWT authentication system</li>
+              <li>Job &amp; application management</li>
+              <li>Spring Boot backend, React frontend</li>
+            </ul>
+            <div class="repo-meta">
+              <span class="repo-stack">Java · Spring Boot · React · JWT</span>
+            </div>
+          </div>
+
+          <div class="repo-card" data-aos>
+            <div class="repo-top">
+              <span class="repo-lang-dot dot-php"></span>
+              <h3>ecommerce-php-mysql</h3>
+            </div>
+            <p class="repo-desc">Database-driven e-commerce app with authentication and product management.</p>
+            <ul class="repo-list">
+              <li>User authentication</li>
+              <li>Product management</li>
+              <li>MySQL integration</li>
+            </ul>
+            <div class="repo-meta">
+              <span class="repo-stack">PHP · MySQL</span>
+              <a href="https://github.com/roshan1520/E-commerce-project.git" class="repo-link" target="_blank"
+                rel="noopener">View code →</a>
+            </div>
+          </div>
+
+          <div class="repo-card" data-aos>
+            <div class="repo-top">
+              <span class="repo-lang-dot dot-java"></span>
+              <h3>crud-file-system</h3>
+            </div>
+            <p class="repo-desc">Java application for managing records with file-based storage.</p>
+            <ul class="repo-list">
+              <li>Create, Read, Update, Delete</li>
+              <li>File-based persistence</li>
+            </ul>
+            <div class="repo-meta">
+              <span class="repo-stack">Java · File System</span>
+              <a href="https://github.com/roshan1520/CRUDWITHJAVA.git" class="repo-link" target="_blank"
+                rel="noopener">View code →</a>
+            </div>
+          </div>
+
+          <div class="repo-card" data-aos>
+            <div class="repo-top">
+              <span class="repo-lang-dot dot-js"></span>
+              <h3>text-editor</h3>
+            </div>
+            <video controls>
+              <source src="./video/Screen Recording 2024-11-11 at 3.58.52 PM.mov" type="video/mp4">
+            </video>
+            <p class="repo-desc">Custom text editor with file creation, editing and save/open support.</p>
+            <div class="repo-meta">
+              <span class="repo-stack">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="repo-card" data-aos>
+            <div class="repo-top">
+              <span class="repo-lang-dot dot-js"></span>
+              <h3>snake-game</h3>
+            </div>
+            <video controls>
+              <source src="./video/Screen Recording 2024-11-10 at 9.31.17 PM.mov" type="video/mp4">
+            </video>
+            <p class="repo-desc">Classic snake game with real-time movement and score tracking.</p>
+            <div class="repo-meta">
+              <span class="repo-stack">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="repo-card" data-aos>
+            <div class="repo-top">
+              <span class="repo-lang-dot dot-android"></span>
+              <h3>ncert-books-app</h3>
+            </div>
+            <p class="repo-desc">Android app for browsing and downloading NCERT textbooks from the cloud.</p>
+            <ul class="repo-list">
+              <li>Cloud PDF downloads</li>
+              <li>JSON dataset</li>
+              <li>Full backend + frontend</li>
+            </ul>
+            <div class="repo-meta">
+              <span class="repo-stack">Android Studio</span>
+              <a href="./app-debug.apk" class="repo-link" download>Download APK →</a>
+            </div>
+          </div>
+
         </div>
-      </div>
+      </section>
+
+      <!-- Experience: commit log -->
+      <section id="experience" class="section">
+        <p class="section-label">04 — experience.log</p>
+        <p class="section-sub">git log --oneline --decorate</p>
+
+        <div class="commit-log">
+
+          <div class="commit commit-head" data-aos>
+            <div class="commit-rail">
+              <span class="commit-dot commit-dot-current"></span>
+              <span class="commit-line"></span>
+            </div>
+            <div class="commit-body">
+              <p class="commit-meta">
+                <span class="commit-hash">a1e4f9c</span>
+                <span class="commit-ref">HEAD -&gt; main</span>
+              </p>
+              <h3>Associate Software Engineer <span class="commit-org">@ Inkey IT Solutions Pvt. Ltd.</span></h3>
+              <p class="commit-date">Jul 2026 — Present</p>
+              <p class="commit-desc">Promoted from intern to full-time. Building on Microsoft Dynamics 365 Business
+                Central and SharePoint.</p>
+              <ul class="commit-diff">
+                <li class="add">+ Owning features across Warehouse &amp; Manufacturing modules</li>
+                <li class="add">+ Writing production AL code for ERP workflows</li>
+                <li class="add">+ Supporting intranet &amp; document workflows on SharePoint</li>
+                <li class="add">+ Building Power Apps canvas apps on top of SharePoint lists</li>
+                <li class="add">+ Collaborating directly with business stakeholders</li>
+              </ul>
+              <p class="commit-tech"><b>Tech:</b> AL Language · Business Central · SharePoint · Power Apps · ERP</p>
+            </div>
+          </div>
+
+          <div class="commit" data-aos>
+            <div class="commit-rail">
+              <span class="commit-dot"></span>
+              <span class="commit-line"></span>
+            </div>
+            <div class="commit-body">
+              <p class="commit-meta"><span class="commit-hash">7c2b810</span></p>
+              <h3>Business Central Intern <span class="commit-org">@ Inkey IT Solutions Pvt. Ltd.</span></h3>
+              <p class="commit-date">2025 — 2026</p>
+              <p class="commit-desc">First hands-on work with Dynamics 365 Business Central and ERP development.</p>
+              <ul class="commit-diff">
+                <li class="add">+ Learned and implemented the AL language</li>
+                <li class="add">+ Contributed to Warehouse &amp; Manufacturing modules</li>
+                <li class="add">+ Understood ERP workflows and business processes</li>
+              </ul>
+              <p class="commit-tech"><b>Tech:</b> AL Language · Business Central · ERP</p>
+            </div>
+          </div>
+
+          <div class="commit" data-aos>
+            <div class="commit-rail">
+              <span class="commit-dot"></span>
+              <span class="commit-line"></span>
+            </div>
+            <div class="commit-body">
+              <p class="commit-meta"><span class="commit-hash">4f91ab2</span></p>
+              <h3>Full Stack Developer Intern <span class="commit-org">@ ZIDIO Connect</span></h3>
+              <p class="commit-desc">Built a full-stack job portal with authentication and multiple user modules.</p>
+              <ul class="commit-diff">
+                <li class="add">+ Backend built with Spring Boot</li>
+                <li class="add">+ Secure JWT authentication</li>
+                <li class="add">+ Job, application &amp; notification modules</li>
+                <li class="add">+ Frontend wired to backend APIs</li>
+              </ul>
+              <p class="commit-tech"><b>Tech:</b> Java · Spring Boot · React · MySQL · JWT</p>
+            </div>
+          </div>
+
+          <div class="commit" data-aos>
+            <div class="commit-rail">
+              <span class="commit-dot"></span>
+            </div>
+            <div class="commit-body">
+              <p class="commit-meta"><span class="commit-hash">0d13e77</span></p>
+              <h3>Data Analytics Intern <span class="commit-org">@ CSRBOX</span></h3>
+              <p class="commit-date">15-day internship</p>
+              <p class="commit-desc">Short-term internship focused on data analysis and visualization.</p>
+              <ul class="commit-diff">
+                <li class="add">+ Data cleaning &amp; preprocessing</li>
+                <li class="add">+ Reports and insights from real datasets</li>
+              </ul>
+              <p class="commit-tech"><b>Tech:</b> Excel · Python · Tableau</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Learning: unmerged branch -->
+      <section id="learning" class="section">
+        <p class="section-label">05 — learning.branch</p>
+        <p class="section-sub">git branch --list &nbsp;·&nbsp; not yet merged into main</p>
+
+        <div class="branch-grid">
+
+          <div class="branch-card" data-aos>
+            <div class="branch-top">
+              <span class="branch-icon">⑂</span>
+              <h3>feature/power-platform</h3>
+              <span class="branch-wip-tag">WIP</span>
+            </div>
+            <p class="branch-desc">Extending SharePoint work into the wider Microsoft Power Platform — canvas apps in
+              Power Apps, automated flows in Power Automate, connected data sources end to end.</p>
+            <div class="branch-progress">
+              <span class="branch-progress-fill" style="width:55%"></span>
+            </div>
+            <p class="branch-stage">building → comfortable</p>
+          </div>
+
+          <div class="branch-card" data-aos>
+            <div class="branch-top">
+              <span class="branch-icon">⑂</span>
+              <h3>feature/power-bi</h3>
+              <span class="branch-wip-tag">WIP</span>
+            </div>
+            <p class="branch-desc">Learning DAX and building interactive dashboards, connecting Power BI to live data
+              sources for reporting.</p>
+            <div class="branch-progress">
+              <span class="branch-progress-fill" style="width:35%"></span>
+            </div>
+            <p class="branch-stage">exploring → building</p>
+          </div>
+
+          <div class="branch-card" data-aos>
+            <div class="branch-top">
+              <span class="branch-icon">⑂</span>
+              <h3>feature/azure</h3>
+              <span class="branch-wip-tag">WIP</span>
+            </div>
+            <p class="branch-desc">Getting hands-on with core Azure services — App Services, Azure AD, and Cognitive
+              Services — to round out the Microsoft cloud stack.</p>
+            <div class="branch-progress">
+              <span class="branch-progress-fill" style="width:40%"></span>
+            </div>
+            <p class="branch-stage">exploring → building</p>
+          </div>
+
+          <div class="branch-card" data-aos>
+            <div class="branch-top">
+              <span class="branch-icon">⑂</span>
+              <h3>feature/data-analytics</h3>
+              <span class="branch-wip-tag">WIP</span>
+            </div>
+            <p class="branch-desc">Sharpening data analytics fundamentals — cleaning, modeling and visualizing datasets
+              end-to-end.</p>
+            <div class="branch-progress">
+              <span class="branch-progress-fill" style="width:50%"></span>
+            </div>
+            <p class="branch-stage">building → comfortable</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section">
+        <p class="section-label">06 — education.md</p>
+        <p class="section-sub">Release notes.</p>
+
+        <div class="release-grid">
+
+          <div class="release-card release-latest" data-aos>
+            <div class="release-tag">v3.0 — latest</div>
+            <h3>B.E. Computer Science</h3>
+            <p class="release-org">Gujarat Technological University (GTU) · SNPIT</p>
+            <p class="release-desc">Strong foundation in programming, data structures, web development and software
+              engineering.</p>
+            <div class="release-foot">
+              <span class="release-year">2026</span>
+              <span class="release-score">CGPA 8.29</span>
+            </div>
+          </div>
+
+          <div class="release-card" data-aos>
+            <div class="release-tag">v2.0</div>
+            <h3>Higher Secondary (HSC)</h3>
+            <p class="release-org">GSEB Board · Sanskar Vidya Sankul</p>
+            <p class="release-desc">Science stream.</p>
+            <div class="release-foot">
+              <span class="release-year">2022</span>
+              <span class="release-score">61%</span>
+            </div>
+          </div>
+
+          <div class="release-card" data-aos>
+            <div class="release-tag">v1.0</div>
+            <h3>Secondary School (SSC)</h3>
+            <p class="release-org">GSEB Board · Little Flower High School</p>
+            <p class="release-desc">Foundational academic groundwork.</p>
+            <div class="release-foot">
+              <span class="release-year">2020</span>
+              <span class="release-score">67% · 86th %ile</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <p class="section-label">07 — contact.sh</p>
+        <div class="config-card">
+          <div class="config-row">
+            <span class="config-key">email:</span>
+            <a href="mailto:roshanvareli707@gmail.com" class="config-val">roshanvareli707@gmail.com</a>
+          </div>
+          <div class="config-row">
+            <span class="config-key">email_alt:</span>
+            <a href="mailto:roshan220490131020@gmail.com" class="config-val">roshan220490131020@gmail.com</a>
+          </div>
+          <div class="config-row">
+            <span class="config-key">phone:</span>
+            <a href="tel:+917201924749" class="config-val">+91 7201924749</a>
+          </div>
+          <div class="config-row">
+            <span class="config-key">status:</span>
+            <span class="config-val"><span class="status-dot"></span>open to interesting problems</span>
+          </div>
+        </div>
+
+        <div class="badge-row">
+          <a href="https://www.linkedin.com/in/roshan-gupta-458825160" target="_blank" rel="noopener"
+            class="badge">LinkedIn</a>
+          <a href="https://github.com/roshan1520" target="_blank" rel="noopener" class="badge">GitHub</a>
+          <a href="https://x.com/RoshanGupt53146" target="_blank" rel="noopener" class="badge">Twitter / X</a>
+          <a href="https://www.instagram.com/roshangupta.x01" target="_blank" rel="noopener" class="badge">Instagram</a>
+          <a href="https://youtube.com/@visionmathematics3523" target="_blank" rel="noopener" class="badge">YouTube</a>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2026 Roshan Gupta — built with too many terminal tabs open<span class="footer-cursor">_</span></p>
+      </footer>
 
     </div>
-  </section>
+  </div>
 
-  <!-- Education -->
-  <section id="education" class="section">
-    <p class="section-label">05 — education.md</p>
-    <p class="section-sub">Release notes.</p>
-
-    <div class="release-grid">
-
-      <div class="release-card release-latest" data-aos>
-        <div class="release-tag">v3.0 — latest</div>
-        <h3>B.E. Computer Science</h3>
-        <p class="release-org">Gujarat Technological University (GTU) · SNPIT</p>
-        <p class="release-desc">Strong foundation in programming, data structures, web development and software engineering.</p>
-        <div class="release-foot">
-          <span class="release-year">2026</span>
-          <span class="release-score">CGPA 8.29</span>
-        </div>
-      </div>
-
-      <div class="release-card" data-aos>
-        <div class="release-tag">v2.0</div>
-        <h3>Higher Secondary (HSC)</h3>
-        <p class="release-org">GSEB Board · Sanskar Vidya Sankul</p>
-        <p class="release-desc">Science stream.</p>
-        <div class="release-foot">
-          <span class="release-year">2022</span>
-          <span class="release-score">61%</span>
-        </div>
-      </div>
-
-      <div class="release-card" data-aos>
-        <div class="release-tag">v1.0</div>
-        <h3>Secondary School (SSC)</h3>
-        <p class="release-org">GSEB Board · Little Flower High School</p>
-        <p class="release-desc">Foundational academic groundwork.</p>
-        <div class="release-foot">
-          <span class="release-year">2020</span>
-          <span class="release-score">67% · 86th %ile</span>
-        </div>
-      </div>
-
+  <!-- Status bar -->
+  <div class="statusbar">
+    <div class="statusbar-left">
+      <span class="statusbar-item">⑂ main</span>
+      <span class="statusbar-item statusbar-file" id="statusbar-file">home.tsx</span>
     </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <p class="section-label">06 — contact.sh</p>
-    <div class="config-card">
-      <div class="config-row">
-        <span class="config-key">email:</span>
-        <a href="mailto:roshanvareli707@gmail.com" class="config-val">roshanvareli707@gmail.com</a>
-      </div>
-      <div class="config-row">
-        <span class="config-key">email_alt:</span>
-        <a href="mailto:roshan220490131020@gmail.com" class="config-val">roshan220490131020@gmail.com</a>
-      </div>
-      <div class="config-row">
-        <span class="config-key">phone:</span>
-        <a href="tel:+917201924749" class="config-val">+91 7201924749</a>
-      </div>
-      <div class="config-row">
-        <span class="config-key">status:</span>
-        <span class="config-val"><span class="status-dot"></span>open to interesting problems</span>
-      </div>
+    <div class="statusbar-right">
+      <span class="statusbar-item">● 0 problems</span>
+      <span class="statusbar-item">UTF-8</span>
+      <span class="statusbar-item"><span class="status-dot"></span> Available for work</span>
     </div>
-
-    <div class="badge-row">
-      <a href="https://www.linkedin.com/in/roshan-gupta-458825160" target="_blank" rel="noopener" class="badge">LinkedIn</a>
-      <a href="https://github.com/roshan1520" target="_blank" rel="noopener" class="badge">GitHub</a>
-      <a href="https://x.com/RoshanGupt53146" target="_blank" rel="noopener" class="badge">Twitter / X</a>
-      <a href="https://www.instagram.com/roshangupta.x01" target="_blank" rel="noopener" class="badge">Instagram</a>
-      <a href="https://youtube.com/@visionmathematics3523" target="_blank" rel="noopener" class="badge">YouTube</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Roshan Gupta — built with too many terminal tabs open<span class="footer-cursor">_</span></p>
-  </footer>
+  </div>
 
   <script src="./script.js"></script>
 </body>
+
 </html>
